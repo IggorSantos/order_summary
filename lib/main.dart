@@ -37,7 +37,13 @@ Widget build(BuildContext context) {
             child: Column(
               children: <Widget>[
                 Text('Order Summary'),
-                Text('You can listen to millions of songs, audiobooks, and podcasts on any device anywhere you like'),
+                Container(
+                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  child: Text(
+                  'You can listen to millions of songs, audiobooks, and podcasts on any device anywhere you like',
+                   textAlign: TextAlign.center,
+                  ),
+                ),
               ]
             ),
           ),
@@ -46,8 +52,15 @@ Widget build(BuildContext context) {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(
-                  Icons.music_note,
+                Column(
+                  children: <Widget>[
+                    Icon(
+                      Icons.music_note,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ]
                 ),
                 Column(
                   children: <Widget>[
@@ -55,7 +68,14 @@ Widget build(BuildContext context) {
                     Text('(\$) 59,90/year'),
                   ]
                 ),
-                Text('Change'),
+                Column(
+                  children: <Widget>[
+                    Text('Change'),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ]
+                ),
               ]
             ),
           ),
