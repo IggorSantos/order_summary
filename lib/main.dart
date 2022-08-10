@@ -28,6 +28,14 @@ const HomePage({Key? key}) : super(key: key);
 Widget build(BuildContext context) {
   return Scaffold(
     body: Container(
+    margin: EdgeInsets.only(top: 10, left: 80, right: 80, bottom: 30),
+    decoration: BoxDecoration(
+      border: Border.all(
+        color: Colors.blue,
+        width: 2.0,
+      ),
+      borderRadius: BorderRadius.circular(10),
+    ),
       child: Column(
         children: <Widget>[
           Expanded(
@@ -38,7 +46,7 @@ Widget build(BuildContext context) {
               children: <Widget>[
                 Text('Order Summary'),
                 Container(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  padding: const EdgeInsets.only(left: 65, right: 65),
                   child: Text(
                   'You can listen to millions of songs, audiobooks, and podcasts on any device anywhere you like',
                    textAlign: TextAlign.center,
@@ -49,7 +57,7 @@ Widget build(BuildContext context) {
           ),
           Expanded(
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Column(
@@ -70,10 +78,7 @@ Widget build(BuildContext context) {
                 ),
                 Column(
                   children: <Widget>[
-                    Text('Change'),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    Text('Change'),                    
                   ]
                 ),
               ]
